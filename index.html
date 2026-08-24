@@ -1,0 +1,199 @@
+<!DOCTYPE html>
+<html lang="it" class="scroll-smooth">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>CP Performance Lab | Chinesiologia, Return to Play & Bike Fitting</title>
+  <script src="https://cdn.tailwindcss.com"></script>
+  <script>
+    tailwind.config = {
+      theme: {
+        extend: {
+          colors: {
+            brandDark: '#0B0F17',
+            brandCard: '#161C28',
+            brandMagenta: '#E6007A',
+            brandOrange: '#FF5500',
+            brandBlue: '#0066FF',
+          }
+        }
+      }
+    }
+  </script>
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+</head>
+<body class="bg-brandDark text-slate-100 font-sans antialiased selection:bg-brandMagenta selection:text-white">
+
+  <!-- Navbar -->
+  <nav class="fixed w-full z-50 bg-brandDark/80 backdrop-blur-md border-b border-slate-800">
+    <div class="max-w-7xl mx-auto px-6 py-4 flex justify-between items-center">
+      <div class="flex items-center gap-2">
+        <span class="text-2xl font-black tracking-wider bg-gradient-to-r from-brandMagenta via-brandOrange to-brandBlue bg-clip-text text-transparent">
+          CP PERFORMANCE LAB
+        </span>
+      </div>
+      <div class="hidden md:flex items-center space-x-8 text-sm font-semibold text-slate-300">
+        <a href="#servizi" class="hover:text-brandMagenta transition">Servizi</a>
+        <a href="#metodo" class="hover:text-brandMagenta transition">Metodo</a>
+        <a href="#studio" class="hover:text-brandMagenta transition">Lo Studio</a>
+      </div>
+      <a href="#contatti" class="bg-gradient-to-r from-brandMagenta to-brandOrange hover:opacity-90 text-white font-bold px-5 py-2.5 rounded-full transition shadow-lg shadow-brandMagenta/20">
+        Prenota Visita
+      </a>
+    </div>
+  </nav>
+
+  <!-- Hero Section -->
+  <section class="relative pt-36 pb-20 px-6 max-w-7xl mx-auto text-center md:text-left flex flex-col md:flex-row items-center justify-between gap-12">
+    <div class="md:w-1/2 space-y-6">
+      <div class="inline-flex items-center gap-2 px-4 py-2 rounded-full bg-slate-800/80 border border-slate-700 text-xs font-semibold text-brandMagenta">
+        <i class="fa-solid fa-graduation-cap"></i> Chinesiologia & Biomeccanica Applicata
+      </div>
+      <h1 class="text-4xl md:text-6xl font-black tracking-tight leading-tight">
+        Dall'Infortunio al <span class="bg-gradient-to-r from-brandMagenta via-brandOrange to-brandBlue bg-clip-text text-transparent">Massimo Rendimento</span>.
+      </h1>
+      <p class="text-slate-400 text-lg leading-relaxed">
+        Percorsi scientifici di <strong>Return to Play</strong> per tutti gli atleti e servizi specialistici di <strong>Biomeccanica & Messa in Sella</strong> per il ciclismo. Riprendi il controllo delle tue prestazioni.
+      </p>
+      <div class="flex flex-col sm:flex-row gap-4 pt-4">
+        <a href="#contatti" class="bg-gradient-to-r from-brandMagenta to-brandOrange text-white font-bold px-8 py-4 rounded-xl text-center shadow-lg shadow-brandMagenta/25 hover:scale-[1.02] transition">
+          Richiedi una Valutazione
+        </a>
+        <a href="#servizi" class="bg-brandCard border border-slate-700 hover:border-slate-500 text-slate-200 font-bold px-8 py-4 rounded-xl text-center transition">
+          Scopri i Servizi
+        </a>
+      </div>
+    </div>
+    
+    <!-- Badges / Statistiche -->
+    <div class="md:w-1/2 grid grid-cols-2 gap-4 w-full">
+      <div class="bg-brandCard p-6 rounded-2xl border border-slate-800 space-y-2">
+        <i class="fa-solid fa-heart-pulse text-3xl text-brandMagenta"></i>
+        <h3 class="text-xl font-bold">Return to Play</h3>
+        <p class="text-sm text-slate-400">Riatletizzazione sicura e guidata per ogni disciplina sportiva.</p>
+      </div>
+      <div class="bg-brandCard p-6 rounded-2xl border border-slate-800 space-y-2">
+        <i class="fa-solid fa-bicycle text-3xl text-brandOrange"></i>
+        <h3 class="text-xl font-bold">Bike Fitting</h3>
+        <p class="text-sm text-slate-400">Ottimizzazione biomeccanica per eliminare dolori e spingere più watt.</p>
+      </div>
+      <div class="bg-brandCard p-6 rounded-2xl border border-slate-800 space-y-2">
+        <i class="fa-solid fa-microscope text-3xl text-brandBlue"></i>
+        <h3 class="text-xl font-bold">Analisi Dati</h3>
+        <p class="text-sm text-slate-400">Valutazioni funzionali basate su evidenze scientifiche.</p>
+      </div>
+      <div class="bg-brandCard p-6 rounded-2xl border border-slate-800 space-y-2">
+        <i class="fa-solid fa-location-dot text-3xl text-slate-200"></i>
+        <h3 class="text-xl font-bold">Nimis (UD)</h3>
+        <p class="text-sm text-slate-400">Presso lo Studio Fisioterapico Valli del Torre.</p>
+      </div>
+    </div>
+  </section>
+
+  <!-- Servizi Core -->
+  <section id="servizi" class="py-20 bg-slate-950/50 border-t border-slate-800/80 px-6">
+    <div class="max-w-7xl mx-auto space-y-12">
+      <div class="text-center space-y-4 max-w-2xl mx-auto">
+        <h2 class="text-3xl md:text-4xl font-black">Servizi Specialistici</h2>
+        <p class="text-slate-400">Soluzioni personalizzate per atleti professionisti, amatori e appassionati di ciclismo.</p>
+      </div>
+
+      <div class="grid md:grid-cols-2 gap-8">
+        <!-- Card 1: Return to Play -->
+        <div class="bg-brandCard rounded-3xl p-8 border border-slate-800 space-y-6 relative overflow-hidden group hover:border-brandMagenta/50 transition duration-300">
+          <div class="absolute -right-10 -bottom-10 w-40 h-40 bg-brandMagenta/10 rounded-full blur-3xl group-hover:bg-brandMagenta/20 transition"></div>
+          <div class="w-14 h-14 rounded-2xl bg-brandMagenta/10 border border-brandMagenta/30 flex items-center justify-center text-brandMagenta text-2xl">
+            <i class="fa-solid fa-person-running"></i>
+          </div>
+          <h3 class="text-2xl font-bold">Chinesiologia & Return to Play</h3>
+          <p class="text-slate-400 leading-relaxed">
+            Il ponte fondamentale tra la fase fisioterapica e il rientro agonistico sul campo. Il percorso si rivolge ad atleti di qualsiasi disciplina sportiva.
+          </p>
+          <ul class="space-y-3 text-sm text-slate-300">
+            <li class="flex items-center gap-3"><i class="fa-solid fa-check text-brandMagenta"></i> Valutazione funzionale e compensi motori</li>
+            <li class="flex items-center gap-3"><i class="fa-solid fa-check text-brandMagenta"></i> Riatletizzazione post-infortunio</li>
+            <li class="flex items-center gap-3"><i class="fa-solid fa-check text-brandMagenta"></i> Prevenzione delle recidive e rinforzo specifico</li>
+          </ul>
+        </div>
+
+        <!-- Card 2: Biomeccanica Ciclismo -->
+        <div class="bg-brandCard rounded-3xl p-8 border border-slate-800 space-y-6 relative overflow-hidden group hover:border-brandOrange/50 transition duration-300">
+          <div class="absolute -right-10 -bottom-10 w-40 h-40 bg-brandOrange/10 rounded-full blur-3xl group-hover:bg-brandOrange/20 transition"></div>
+          <div class="w-14 h-14 rounded-2xl bg-brandOrange/10 border border-brandOrange/30 flex items-center justify-center text-brandOrange text-2xl">
+            <i class="fa-solid fa-sliders"></i>
+          </div>
+          <h3 class="text-2xl font-bold">Biomeccanica & Messa in Sella</h3>
+          <p class="text-slate-400 leading-relaxed">
+            Analisi accurata del binomio atleta-bicicletta per ottimizzare l'efficienza di pedalata ed eliminare i dolori da sovraccarico funzionale.
+          </p>
+          <ul class="space-y-3 text-sm text-slate-300">
+            <li class="flex items-center gap-3"><i class="fa-solid fa-check text-brandOrange"></i> Regolazione micrometrica tacchette e sella</li>
+            <li class="flex items-center gap-3"><i class="fa-solid fa-check text-brandOrange"></i> Risoluzione dolori a ginocchia, schiena e collo</li>
+            <li class="flex items-center gap-3"><i class="fa-solid fa-check text-brandOrange"></i> Adattamento assetto per BDC, MTB e Gravel</li>
+          </ul>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Location & Contatti -->
+  <section id="studio" class="py-20 px-6 max-w-7xl mx-auto">
+    <div class="bg-gradient-to-br from-brandCard to-slate-900 border border-slate-800 rounded-3xl p-8 md:p-12 flex flex-col md:flex-row gap-10 items-center justify-between">
+      <div class="space-y-6 md:w-1/2">
+        <h2 class="text-3xl font-black">Dove Ricevo</h2>
+        <p class="text-slate-400">
+          Tutte le consulenze e le sessioni individuali si svolgono in un ambiente professionale altamente attrezzato.
+        </p>
+        <div class="space-y-4 text-slate-300">
+          <div class="flex items-start gap-4">
+            <i class="fa-solid fa-hospital text-brandMagenta text-xl mt-1"></i>
+            <div>
+              <strong class="block text-white">Studio Fisioterapico Valli del Torre</strong>
+              <span>CP Performance Lab</span>
+            </div>
+          </div>
+          <div class="flex items-start gap-4">
+            <i class="fa-solid fa-map-pin text-brandOrange text-xl mt-1"></i>
+            <div>
+              <strong class="block text-white">Indirizzo</strong>
+              <span>Nimis (Udine), Friuli-Venezia Giulia</span>
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <!-- Form Contatto -->
+      <div id="contatti" class="w-full md:w-1/2 bg-brandDark p-6 md:p-8 rounded-2xl border border-slate-800 space-y-4">
+        <h3 class="text-xl font-bold text-white">Prenota una Valutazione</h3>
+        <form class="space-y-4">
+          <div>
+            <label class="block text-xs font-semibold text-slate-400 mb-1">NOME E COGNOME</label>
+            <input type="text" required class="w-full bg-slate-900 border border-slate-800 rounded-lg p-3 text-white focus:outline-none focus:border-brandMagenta">
+          </div>
+          <div>
+            <label class="block text-xs font-semibold text-slate-400 mb-1">SERVIZIO DI INTERESSE</label>
+            <select class="w-full bg-slate-900 border border-slate-800 rounded-lg p-3 text-white focus:outline-none focus:border-brandMagenta">
+              <option>Return to Play / Chinesiologia</option>
+              <option>Biomeccanica Ciclismo (Messa in Sella)</option>
+              <option>Consulenza Generale</option>
+            </select>
+          </div>
+          <div>
+            <label class="block text-xs font-semibold text-slate-400 mb-1">TELEFONO / WHATSAPP</label>
+            <input type="tel" required class="w-full bg-slate-900 border border-slate-800 rounded-lg p-3 text-white focus:outline-none focus:border-brandMagenta">
+          </div>
+          <button type="submit" class="w-full bg-gradient-to-r from-brandMagenta via-brandOrange to-brandBlue font-bold py-3.5 rounded-lg text-white hover:opacity-90 transition">
+            Invia Richiesta
+          </button>
+        </form>
+      </div>
+    </div>
+  </section>
+
+  <!-- Footer -->
+  <footer class="border-t border-slate-800 py-8 text-center text-sm text-slate-500">
+    <p>&copy; 2026 CP Performance Lab - Dott. in Scienze Motorie. Tutti i diritti riservati.</p>
+  </footer>
+
+</body>
+</html>
