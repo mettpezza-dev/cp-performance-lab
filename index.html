@@ -21,23 +21,49 @@
     }
   </script>
   <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+  <style>
+    .glass-panel {
+      background: rgba(22, 28, 40, 0.6);
+      backdrop-filter: blur(12px);
+      -webkit-backdrop-filter: blur(12px);
+      border: 1px solid rgba(255, 255, 255, 0.08);
+    }
+    .glow-magenta:hover {
+      box-shadow: 0 0 25px rgba(230, 0, 122, 0.25);
+    }
+    .glow-orange:hover {
+      box-shadow: 0 0 25px rgba(255, 85, 0, 0.25);
+    }
+    .glow-blue:hover {
+      box-shadow: 0 0 25px rgba(0, 102, 255, 0.25);
+    }
+  </style>
 </head>
 <body class="bg-brandDark text-slate-100 font-sans antialiased selection:bg-brandMagenta selection:text-white">
 
+  <!-- WhatsApp Flottante -->
+  <a href="https://wa.me/393123456789?text=Ciao!%20Vorrei%20informazioni%20sulle%20visite%20presso%20CP%20Performance%20Lab." 
+     target="_blank" 
+     class="fixed bottom-6 right-6 bg-emerald-500 hover:bg-emerald-600 text-white p-4 rounded-full shadow-2xl transition hover:scale-110 z-50 flex items-center justify-center">
+    <i class="fa-brands fa-whatsapp text-3xl"></i>
+  </a>
+
   <!-- Navbar -->
-  <nav class="fixed w-full z-50 bg-brandDark/80 backdrop-blur-md border-b border-slate-800">
+  <nav class="fixed w-full z-40 bg-brandDark/80 backdrop-blur-md border-b border-slate-800/80">
     <div class="max-w-7xl mx-auto px-6 py-4 flex justify-between items-center">
-      <div class="flex items-center gap-2">
-        <span class="text-2xl font-black tracking-wider bg-gradient-to-r from-brandMagenta via-brandOrange to-brandBlue bg-clip-text text-transparent">
+      <div class="flex items-center gap-3">
+        <img src="logo.png" alt="CP Performance Lab Logo" class="h-10 w-auto object-contain" onerror="this.remove(); document.getElementById('logo-text').classList.remove('hidden');">
+        <span id="logo-text" class="hidden text-2xl font-black tracking-wider bg-gradient-to-r from-brandMagenta via-brandOrange to-brandBlue bg-clip-text text-transparent">
           CP PERFORMANCE LAB
         </span>
       </div>
       <div class="hidden md:flex items-center space-x-8 text-sm font-semibold text-slate-300">
+        <a href="#quiz" class="hover:text-brandMagenta transition">Test Autovalutazione</a>
         <a href="#servizi" class="hover:text-brandMagenta transition">Servizi</a>
         <a href="#metodo" class="hover:text-brandMagenta transition">Metodo</a>
         <a href="#studio" class="hover:text-brandMagenta transition">Lo Studio</a>
       </div>
-      <a href="#contatti" class="bg-gradient-to-r from-brandMagenta to-brandOrange hover:opacity-90 text-white font-bold px-5 py-2.5 rounded-full transition shadow-lg shadow-brandMagenta/20">
+      <a href="#contatti" class="bg-gradient-to-r from-brandMagenta to-brandOrange hover:opacity-90 text-white font-bold px-5 py-2.5 rounded-full transition shadow-lg shadow-brandMagenta/20 text-sm">
         Prenota Visita
       </a>
     </div>
@@ -53,175 +79,135 @@
         Dall'Infortunio al <span class="bg-gradient-to-r from-brandMagenta via-brandOrange to-brandBlue bg-clip-text text-transparent">Massimo Rendimento</span>.
       </h1>
       <p class="text-slate-400 text-lg leading-relaxed">
-        Percorsi scientifici di <strong>Return to Play</strong> per tutti gli atleti e servizi specialistici di <strong>Biomeccanica & Messa in Sella</strong> per il ciclismo. Riprendi il controllo delle tue prestazioni.
+        Percorsi scientifici di <strong>Return to Play</strong> per tutti gli atleti e protocolli specialistici di <strong>Biomeccanica & Messa in Sella</strong> per il ciclismo.
       </p>
       <div class="flex flex-col sm:flex-row gap-4 pt-4">
-        <a href="#contatti" class="bg-gradient-to-r from-brandMagenta to-brandOrange text-white font-bold px-8 py-4 rounded-xl text-center shadow-lg shadow-brandMagenta/25 hover:scale-[1.02] transition">
-          Richiedi una Valutazione
+        <a href="#quiz" class="bg-gradient-to-r from-brandMagenta to-brandOrange text-white font-bold px-8 py-4 rounded-xl text-center shadow-lg shadow-brandMagenta/25 hover:scale-[1.02] transition">
+          Fai il Test di Autovalutazione
         </a>
-        <a href="#servizi" class="bg-brandCard border border-slate-700 hover:border-slate-500 text-slate-200 font-bold px-8 py-4 rounded-xl text-center transition">
-          Scopri i Servizi
+        <a href="#contatti" class="glass-panel border border-slate-700 hover:border-slate-500 text-slate-200 font-bold px-8 py-4 rounded-xl text-center transition">
+          Prenota subito a Nimis
         </a>
       </div>
     </div>
     
-    <!-- Badges / Statistiche -->
     <div class="md:w-1/2 grid grid-cols-2 gap-4 w-full">
-      <div class="bg-brandCard p-6 rounded-2xl border border-slate-800 space-y-2">
+      <div class="glass-panel p-6 rounded-2xl glow-magenta transition duration-300 space-y-2">
         <i class="fa-solid fa-heart-pulse text-3xl text-brandMagenta"></i>
         <h3 class="text-xl font-bold">Return to Play</h3>
-        <p class="text-sm text-slate-400">Riatletizzazione sicura e guidata per ogni disciplina sportiva.</p>
+        <p class="text-sm text-slate-400">Riatletizzazione e prevenzione recidive per ogni sport.</p>
       </div>
-      <div class="bg-brandCard p-6 rounded-2xl border border-slate-800 space-y-2">
+      <div class="glass-panel p-6 rounded-2xl glow-orange transition duration-300 space-y-2">
         <i class="fa-solid fa-bicycle text-3xl text-brandOrange"></i>
         <h3 class="text-xl font-bold">Bike Fitting</h3>
-        <p class="text-sm text-slate-400">Ottimizzazione biomeccanica per eliminare dolori e spingere più watt.</p>
+        <p class="text-sm text-slate-400">Zero dolori in sella e massima efficienza di pedalata.</p>
       </div>
-      <div class="bg-brandCard p-6 rounded-2xl border border-slate-800 space-y-2">
+      <div class="glass-panel p-6 rounded-2xl glow-blue transition duration-300 space-y-2">
         <i class="fa-solid fa-microscope text-3xl text-brandBlue"></i>
         <h3 class="text-xl font-bold">Analisi Dati</h3>
-        <p class="text-sm text-slate-400">Valutazioni funzionali basate su evidenze scientifiche.</p>
+        <p class="text-sm text-slate-400">Valutazioni basate su evidenze scientifiche.</p>
       </div>
-      <div class="bg-brandCard p-6 rounded-2xl border border-slate-800 space-y-2">
+      <div class="glass-panel p-6 rounded-2xl transition duration-300 space-y-2">
         <i class="fa-solid fa-location-dot text-3xl text-slate-200"></i>
         <h3 class="text-xl font-bold">Nimis (UD)</h3>
-        <p class="text-sm text-slate-400">Presso lo Studio Fisioterapico Valli del Torre.</p>
+        <p class="text-sm text-slate-400">Studio Fisioterapico Valli del Torre.</p>
       </div>
     </div>
   </section>
-  <!-- Sezione Metodo Avanzata -->
-<section id="metodo" class="py-24 px-6 max-w-7xl mx-auto border-t border-slate-800/80">
-  <!-- Header Sezione -->
-  <div class="text-center space-y-4 max-w-3xl mx-auto mb-20">
-    <div class="inline-flex items-center gap-2 px-4 py-1.5 rounded-full bg-slate-800 border border-slate-700 text-xs font-semibold text-brandOrange">
-      <i class="fa-solid fa-microscope"></i> Protocollo Scientifico
-    </div>
-    <h2 class="text-3xl md:text-5xl font-black">Dall'Analisi al Risultato: Il Metodo</h2>
-    <p class="text-slate-400 text-base md:text-lg">
-      Ogni corpo ha una biomeccanica unica. Non utilizziamo soluzioni preimpostate, ma un processo in 4 fasi per massimizzare il rendimento e annullare gli infortuni.
-    </p>
-  </div>
 
-  <!-- Timeline Grid -->
-  <div class="grid md:grid-cols-2 lg:grid-cols-4 gap-8 relative">
-    
-    <!-- Fase 1 -->
-    <div class="bg-brandCard rounded-3xl p-8 border border-slate-800 flex flex-col justify-between hover:border-brandMagenta/50 transition duration-300 relative group">
-      <div class="space-y-4">
-        <div class="flex items-center justify-between">
-          <span class="text-4xl font-black text-brandMagenta">01</span>
-          <span class="text-xs font-bold uppercase tracking-widest text-slate-500 bg-slate-900 px-3 py-1 rounded-full border border-slate-800">Fase 1</span>
-        </div>
-        <h3 class="text-xl font-bold text-white group-hover:text-brandMagenta transition">Anamnesi & Obiettivi</h3>
-        <p class="text-sm text-slate-400 leading-relaxed">
-          Colloquio clinico-sportivo approfondito per analizzare lo storico degli infortuni, i carichi di lavoro attuali, le calzature e i dolori ricorrenti.
-        </p>
+  <!-- QUIZ INTERATTIVO LEAD MAGNET -->
+  <section id="quiz" class="py-20 px-6 max-w-4xl mx-auto">
+    <div class="glass-panel rounded-3xl p-8 md:p-12 border border-slate-800 space-y-8 relative overflow-hidden">
+      <div class="text-center space-y-3">
+        <span class="text-xs font-bold uppercase tracking-widest text-brandOrange bg-brandOrange/10 px-3 py-1 rounded-full border border-brandOrange/30">
+          Interactive Assessment
+        </span>
+        <h2 class="text-3xl font-black">Test di Autovalutazione Rapido</h2>
+        <p class="text-slate-400 text-sm">Scopri come la biomeccanica o la chinesiologia possono risolvere il tuo problema.</p>
       </div>
-      <div class="pt-6 mt-6 border-t border-slate-800/80 space-y-2">
-        <span class="text-xs font-semibold text-slate-400 block">Output della fase:</span>
-        <div class="flex items-center gap-2 text-xs text-slate-300 font-medium">
-          <i class="fa-solid fa-circle-check text-brandMagenta"></i> Quadro clinico e target prestazionale
-        </div>
-      </div>
-    </div>
 
-    <!-- Fase 2 -->
-    <div class="bg-brandCard rounded-3xl p-8 border border-slate-800 flex flex-col justify-between hover:border-brandOrange/50 transition duration-300 relative group">
-      <div class="space-y-4">
-        <div class="flex items-center justify-between">
-          <span class="text-4xl font-black text-brandOrange">02</span>
-          <span class="text-xs font-bold uppercase tracking-widest text-slate-500 bg-slate-900 px-3 py-1 rounded-full border border-slate-800">Fase 2</span>
+      <!-- Form Quiz JS -->
+      <div id="quiz-container" class="space-y-6">
+        <div>
+          <label class="block text-sm font-bold text-slate-200 mb-3">1. Qual è il tuo obiettivo primario?</label>
+          <div class="grid sm:grid-cols-2 gap-3">
+            <button onclick="selectQuizOption('obiettivo', 'ciclismo')" class="quiz-opt-1 p-4 rounded-xl border border-slate-800 bg-slate-900/50 hover:border-brandOrange text-left text-sm font-medium transition">
+              <i class="fa-solid fa-bicycle text-brandOrange mr-2"></i> Risolvere dolori in Bici / Bike Fitting
+            </button>
+            <button onclick="selectQuizOption('obiettivo', 'infortunio')" class="quiz-opt-1 p-4 rounded-xl border border-slate-800 bg-slate-900/50 hover:border-brandMagenta text-left text-sm font-medium transition">
+              <i class="fa-solid fa-person-running text-brandMagenta mr-2"></i> Rientrare da un Infortunio (Return to Play)
+            </button>
+          </div>
         </div>
-        <h3 class="text-xl font-bold text-white group-hover:text-brandOrange transition">Test Biomeccanici</h3>
-        <p class="text-sm text-slate-400 leading-relaxed">
-          Valutazione articolare e muscolare sul lettino e analisi dinamica: video-analisi della pedalata per il ciclismo o test dei compensi per il Return to Play.
-        </p>
-      </div>
-      <div class="pt-6 mt-6 border-t border-slate-800/80 space-y-2">
-        <span class="text-xs font-semibold text-slate-400 block">Output della fase:</span>
-        <div class="flex items-center gap-2 text-xs text-slate-300 font-medium">
-          <i class="fa-solid fa-circle-check text-brandOrange"></i> Mappatura asimmetrie e angoli critici
+
+        <div id="quiz-step-2" class="hidden space-y-3">
+          <label class="block text-sm font-bold text-slate-200 mb-3">2. Dove avverti maggiormente il fastidio o la limitazione?</label>
+          <div class="grid sm:grid-cols-3 gap-3">
+            <button onclick="finishQuiz('Ginocchio / Anca')" class="p-3 rounded-xl border border-slate-800 bg-slate-900/50 hover:border-brandBlue text-left text-xs font-medium transition">Ginocchio / Anca</button>
+            <button onclick="finishQuiz('Schiena / Cervicale')" class="p-3 rounded-xl border border-slate-800 bg-slate-900/50 hover:border-brandBlue text-left text-xs font-medium transition">Schiena / Cervicale</button>
+            <button onclick="finishQuiz('Mani / Appoggio Sella')" class="p-3 rounded-xl border border-slate-800 bg-slate-900/50 hover:border-brandBlue text-left text-xs font-medium transition">Formicolio / Sella</button>
+          </div>
+        </div>
+
+        <div id="quiz-result" class="hidden p-6 rounded-2xl bg-slate-900/90 border border-brandMagenta/40 space-y-4 text-center">
+          <i class="fa-solid fa-circle-check text-4xl text-brandMagenta"></i>
+          <h3 class="text-xl font-bold text-white">Analisi Iniziale Completata!</h3>
+          <p class="text-sm text-slate-300 leading-relaxed" id="quiz-result-text"></p>
+          <a href="#contatti" class="inline-block bg-gradient-to-r from-brandMagenta to-brandOrange text-white font-bold px-6 py-3 rounded-xl text-sm transition">
+            Prenota la Valutazione per il tuo caso
+          </a>
         </div>
       </div>
     </div>
+  </section>
 
-    <!-- Fase 3 -->
-    <div class="bg-brandCard rounded-3xl p-8 border border-slate-800 flex flex-col justify-between hover:border-brandBlue/50 transition duration-300 relative group">
-      <div class="space-y-4">
-        <div class="flex items-center justify-between">
-          <span class="text-4xl font-black text-brandBlue">03</span>
-          <span class="text-xs font-bold uppercase tracking-widest text-slate-500 bg-slate-900 px-3 py-1 rounded-full border border-slate-800">Fase 3</span>
-        </div>
-        <h3 class="text-xl font-bold text-white group-hover:text-brandBlue transition">Intervento Attivo</h3>
-        <p class="text-sm text-slate-400 leading-relaxed">
-          Regolazione micrometrica di sella, tacchette e manubrio per la bici, oppure impostazione della scheda di riatletizzazione e rieducazione motoria.
-        </p>
-      </div>
-      <div class="pt-6 mt-6 border-t border-slate-800/80 space-y-2">
-        <span class="text-xs font-semibold text-slate-400 block">Output della fase:</span>
-        <div class="flex items-center gap-2 text-xs text-slate-300 font-medium">
-          <i class="fa-solid fa-circle-check text-brandBlue"></i> Assetto biomeccanico ottimizzato
-        </div>
-      </div>
+  <!-- TABELLA PRIMA VS DOPO -->
+  <section class="py-20 px-6 max-w-5xl mx-auto">
+    <div class="text-center space-y-4 mb-12">
+      <h2 class="text-3xl font-black">Cosa Cambia con CP Performance Lab</h2>
+      <p class="text-slate-400">I risultati concreti dell'approccio scientifico rispetto ai metodi tradizionali.</p>
     </div>
 
-    <!-- Fase 4 -->
-    <div class="bg-brandCard rounded-3xl p-8 border border-slate-800 flex flex-col justify-between hover:border-slate-400 transition duration-300 relative group">
-      <div class="space-y-4">
-        <div class="flex items-center justify-between">
-          <span class="text-4xl font-black text-slate-400">04</span>
-          <span class="text-xs font-bold uppercase tracking-widest text-slate-500 bg-slate-900 px-3 py-1 rounded-full border border-slate-800">Fase 4</span>
-        </div>
-        <h3 class="text-xl font-bold text-white group-hover:text-slate-200 transition">Follow-up & Verifica</h3>
-        <p class="text-sm text-slate-400 leading-relaxed">
-          Monitoraggio sul campo nelle settimane successive per valutare l'adattamento del corpo e applicare eventuali affinamenti micrometrici.
-        </p>
+    <div class="grid md:grid-cols-2 gap-6">
+      <div class="bg-red-950/20 border border-red-900/40 rounded-3xl p-8 space-y-4">
+        <h3 class="text-xl font-bold text-red-400 flex items-center gap-2">
+          <i class="fa-solid fa-xmark-circle"></i> Prima dell'Intervento
+        </h3>
+        <ul class="space-y-3 text-sm text-slate-300">
+          <li class="flex items-start gap-2"><i class="fa-solid fa-minus text-red-400 mt-1"></i> Dolori frequenti al ginocchio o collo dopo 40 km in bici.</li>
+          <li class="flex items-start gap-2"><i class="fa-solid fa-minus text-red-400 mt-1"></i> Posizionamento bici basato su tabelle o formule generiche online.</li>
+          <li class="flex items-start gap-2"><i class="fa-solid fa-minus text-red-400 mt-1"></i> Incertezza e paura di ricadute nel rientro post-infortunio.</li>
+        </ul>
       </div>
-      <div class="pt-6 mt-6 border-t border-slate-800/80 space-y-2">
-        <span class="text-xs font-semibold text-slate-400 block">Output della fase:</span>
-        <div class="flex items-center gap-2 text-xs text-slate-300 font-medium">
-          <i class="fa-solid fa-circle-check text-slate-300"></i> Performance stabile e assenza di dolore
-        </div>
+
+      <div class="bg-emerald-950/20 border border-emerald-900/40 rounded-3xl p-8 space-y-4">
+        <h3 class="text-xl font-bold text-emerald-400 flex items-center gap-2">
+          <i class="fa-solid fa-check-circle"></i> Con CP Performance Lab
+        </h3>
+        <ul class="space-y-3 text-sm text-slate-300">
+          <li class="flex items-start gap-2"><i class="fa-solid fa-check text-emerald-400 mt-1"></i> Assetto micrometrico su misura per pedalare ore senza dolori.</li>
+          <li class="flex items-start gap-2"><i class="fa-solid fa-check text-emerald-400 mt-1"></i> Analisi biomeccanica personalizzata sull'anatomia reale.</li>
+          <li class="flex items-start gap-2"><i class="fa-solid fa-check text-emerald-400 mt-1"></i> Test oggettivi e riatletizzazione sicura sul campo.</li>
+        </ul>
       </div>
     </div>
+  </section>
 
-  </div>
-
-  <!-- Banner di garanzia scientifica -->
-  <div class="mt-16 bg-gradient-to-r from-brandDark via-brandCard to-brandDark border border-slate-800 rounded-2xl p-6 text-center md:flex items-center justify-between gap-6">
-    <div class="flex items-center gap-4 text-left mb-4 md:mb-0">
-      <div class="w-12 h-12 rounded-xl bg-slate-800 flex items-center justify-center text-brandMagenta shrink-0">
-        <i class="fa-solid fa-certificate text-xl"></i>
-      </div>
-      <div>
-        <h4 class="font-bold text-white">Approccio basato su Evidenze Scientifiche</h4>
-        <p class="text-xs text-slate-400">Laurea in Scienze Motorie e continui aggiornamenti in biomeccanica e riatletizzazione.</p>
-      </div>
-    </div>
-    <a href="#contatti" class="inline-block bg-slate-800 hover:bg-slate-700 text-xs font-bold uppercase tracking-wider text-slate-200 px-6 py-3 rounded-xl border border-slate-700 transition">
-      Prenota la tua prima fase
-    </a>
-  </div>
-</section>
-  <!-- Servizi Core -->
+  <!-- SERVIZI CORE -->
   <section id="servizi" class="py-20 bg-slate-950/50 border-t border-slate-800/80 px-6">
     <div class="max-w-7xl mx-auto space-y-12">
       <div class="text-center space-y-4 max-w-2xl mx-auto">
         <h2 class="text-3xl md:text-4xl font-black">Servizi Specialistici</h2>
-        <p class="text-slate-400">Soluzioni personalizzate per atleti professionisti, amatori e appassionati di ciclismo.</p>
+        <p class="text-slate-400">Soluzioni personalizzate per atleti e appassionati di ciclismo.</p>
       </div>
 
       <div class="grid md:grid-cols-2 gap-8">
-        <!-- Card 1: Return to Play -->
-        <div class="bg-brandCard rounded-3xl p-8 border border-slate-800 space-y-6 relative overflow-hidden group hover:border-brandMagenta/50 transition duration-300">
-          <div class="absolute -right-10 -bottom-10 w-40 h-40 bg-brandMagenta/10 rounded-full blur-3xl group-hover:bg-brandMagenta/20 transition"></div>
+        <div class="glass-panel rounded-3xl p-8 glow-magenta transition duration-300 space-y-6">
           <div class="w-14 h-14 rounded-2xl bg-brandMagenta/10 border border-brandMagenta/30 flex items-center justify-center text-brandMagenta text-2xl">
             <i class="fa-solid fa-person-running"></i>
           </div>
           <h3 class="text-2xl font-bold">Chinesiologia & Return to Play</h3>
-          <p class="text-slate-400 leading-relaxed">
-            Il ponte fondamentale tra la fase fisioterapica e il rientro agonistico sul campo. Il percorso si rivolge ad atleti di qualsiasi disciplina sportiva.
-          </p>
+          <p class="text-slate-400 leading-relaxed">Il ponte fondamentale tra la fase fisioterapica e il rientro agonistico sul campo per qualsiasi disciplina sportiva.</p>
           <ul class="space-y-3 text-sm text-slate-300">
             <li class="flex items-center gap-3"><i class="fa-solid fa-check text-brandMagenta"></i> Valutazione funzionale e compensi motori</li>
             <li class="flex items-center gap-3"><i class="fa-solid fa-check text-brandMagenta"></i> Riatletizzazione post-infortunio</li>
@@ -229,60 +215,50 @@
           </ul>
         </div>
 
-        <!-- Card 2: Biomeccanica Ciclismo -->
-        <div class="bg-brandCard rounded-3xl p-8 border border-slate-800 space-y-6 relative overflow-hidden group hover:border-brandOrange/50 transition duration-300">
-          <div class="absolute -right-10 -bottom-10 w-40 h-40 bg-brandOrange/10 rounded-full blur-3xl group-hover:bg-brandOrange/20 transition"></div>
+        <div class="glass-panel rounded-3xl p-8 glow-orange transition duration-300 space-y-6">
           <div class="w-14 h-14 rounded-2xl bg-brandOrange/10 border border-brandOrange/30 flex items-center justify-center text-brandOrange text-2xl">
             <i class="fa-solid fa-sliders"></i>
           </div>
           <h3 class="text-2xl font-bold">Biomeccanica & Messa in Sella</h3>
-          <p class="text-slate-400 leading-relaxed">
-            Analisi accurata del binomio atleta-bicicletta per ottimizzare l'efficienza di pedalata ed eliminare i dolori da sovraccarico funzionale.
-          </p>
+          <p class="text-slate-400 leading-relaxed">Analisi accurata del binomio atleta-bicicletta per ottimizzare l'efficienza di pedalata ed eliminare i dolori da sovraccarico.</p>
           <ul class="space-y-3 text-sm text-slate-300">
             <li class="flex items-center gap-3"><i class="fa-solid fa-check text-brandOrange"></i> Regolazione micrometrica tacchette e sella</li>
             <li class="flex items-center gap-3"><i class="fa-solid fa-check text-brandOrange"></i> Risoluzione dolori a ginocchia, schiena e collo</li>
-            <li class="flex items-center gap-3"><i class="fa-solid fa-check text-brandOrange"></i> Adattamento assetto per BDC, MTB e Gravel</li>
+            <li class="flex items-center gap-3"><i class="fa-solid fa-check text-brandOrange"></i> Assetto ottimizzato per BDC, MTB e Gravel</li>
           </ul>
         </div>
       </div>
     </div>
   </section>
 
-  <!-- Location & Contatti -->
+  <!-- MAPPA & LOCATION -->
   <section id="studio" class="py-20 px-6 max-w-7xl mx-auto">
-    <div class="bg-gradient-to-br from-brandCard to-slate-900 border border-slate-800 rounded-3xl p-8 md:p-12 flex flex-col md:flex-row gap-10 items-center justify-between">
+    <div class="glass-panel rounded-3xl p-8 md:p-12 border border-slate-800 flex flex-col md:flex-row gap-10 items-center justify-between">
       <div class="space-y-6 md:w-1/2">
         <h2 class="text-3xl font-black">Dove Ricevo</h2>
-        <p class="text-slate-400">
-          Tutte le consulenze e le sessioni individuali si svolgono in un ambiente professionale altamente attrezzato.
-        </p>
+        <p class="text-slate-400">Le sessioni si svolgono presso lo Studio Fisioterapico Valli del Torre a Nimis (Udine).</p>
+        
         <div class="space-y-4 text-slate-300">
-          <div class="flex items-start gap-4">
-            <i class="fa-solid fa-hospital text-brandMagenta text-xl mt-1"></i>
-            <div>
-              <strong class="block text-white">Studio Fisioterapico Valli del Torre</strong>
-              <span>CP Performance Lab</span>
-            </div>
-          </div>
           <div class="flex items-start gap-4">
             <i class="fa-solid fa-map-pin text-brandOrange text-xl mt-1"></i>
             <div>
-              <strong class="block text-white">Indirizzo</strong>
-              <span>Nimis (Udine), Friuli-Venezia Giulia</span>
+              <strong class="block text-white">Indirizzo Studio</strong>
+              <span>Nimis (UD) - Studio Fisioterapico Valli del Torre</span>
             </div>
           </div>
         </div>
+
+        <a href="https://maps.google.com/?q=Studio+Fisioterapico+Valli+del+Torre+Nimis" target="_blank" class="inline-flex items-center gap-2 bg-slate-800 hover:bg-slate-700 text-white text-xs font-bold px-5 py-3 rounded-xl border border-slate-700 transition">
+          <i class="fa-solid fa-location-arrow text-brandMagenta"></i> Apri Mappa Navigatore
+        </a>
       </div>
 
-      <!-- Form Contatto -->
+      <!-- FORM DI CONTATTO CON NETLIFY -->
       <div id="contatti" class="w-full md:w-1/2 bg-brandDark p-6 md:p-8 rounded-2xl border border-slate-800 space-y-4">
         <h3 class="text-xl font-bold text-white">Prenota una Valutazione</h3>
         <form name="contatti-cp" method="POST" action="/success.html" data-netlify="true" netlify-honeypot="bot-field" class="space-y-4">
           <input type="hidden" name="form-name" value="contatti-cp" />
-          <p class="hidden">
-            <label>Don’t fill this out if you’re human: <input name="bot-field" /></label>
-          </p>
+          <p class="hidden"><label><input name="bot-field" /></label></p>
           
           <div>
             <label class="block text-xs font-semibold text-slate-400 mb-1">NOME E COGNOME</label>
@@ -309,16 +285,30 @@
   </section>
 
   <!-- Footer -->
-  <footer class="border-t border-slate-800 py-8 text-center text-sm text-slate-500">
-    <p>&copy; 2026 CP Performance Lab - Dott. in Scienze Motorie. Tutti i diritti riservati.</p>
+  <footer class="border-t border-slate-800 py-8 px-6 text-center text-sm text-slate-500 space-y-4">
+    <div class="flex justify-center gap-6 text-lg">
+      <a href="https://instagram.com" target="_blank" class="text-slate-400 hover:text-brandMagenta transition"><i class="fa-brands fa-instagram"></i></a>
+      <a href="https://wa.me/393123456789" target="_blank" class="text-slate-400 hover:text-emerald-500 transition"><i class="fa-brands fa-whatsapp"></i></a>
+    </div>
+    <p>&copy; 2026 CP Performance Lab - Dott. in Scienze Motorie. Nimis (UD).</p>
   </footer>
 
-  <!-- WhatsApp Floating Button -->
-<a href="https://wa.me/393385823977?text=Ciao!%20Vorrei%20informazioni%20sulle%20visite%20presso%20CP%20Performance%20Lab." 
-   target="_blank" 
-   class="fixed bottom-6 right-6 bg-emerald-500 hover:bg-emerald-600 text-white p-4 rounded-full shadow-2xl transition hover:scale-110 z-50 flex items-center justify-center">
-  <i class="fa-brands fa-whatsapp text-3xl"></i>
-</a>
-  
+  <script>
+    let selectedGoal = '';
+    function selectQuizOption(type, value) {
+      selectedGoal = value;
+      document.getElementById('quiz-step-2').classList.remove('hidden');
+    }
+    function finishQuiz(area) {
+      document.getElementById('quiz-step-2').classList.add('hidden');
+      const resultText = document.getElementById('quiz-result-text');
+      if (selectedGoal === 'ciclismo') {
+        resultText.innerText = `I fastidi nell'area "${area}" derivano solitamente da un disassamento micrometrico tra sella, tacchette o manubrio. Con la nostra analisi biomeccanica a Nimis elimineremo le sovraccaricazioni articolari.`;
+      } else {
+        resultText.innerText = `La sensibilità nell'area "${area}" richiede un protocollo mirato di valutazione dei compensi motori. Con il percorso di Return to Play riabiliteremo la funzione muscolare in totale sicurezza.`;
+      }
+      document.getElementById('quiz-result').classList.remove('hidden');
+    }
+  </script>
 </body>
 </html>
