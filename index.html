@@ -110,46 +110,75 @@
   </section>
 
   <!-- QUIZ INTERATTIVO -->
+  <!-- QUIZ INTERATTIVO & SCIENTIFICO -->
   <section id="quiz" class="py-20 px-6 max-w-4xl mx-auto">
     <div class="glass-panel rounded-3xl p-8 md:p-12 border border-slate-800 space-y-8 relative overflow-hidden">
+      
+      <!-- Header Quiz -->
       <div class="text-center space-y-3">
         <span class="text-xs font-bold uppercase tracking-widest text-brandOrange bg-brandOrange/10 px-3 py-1 rounded-full border border-brandOrange/30">
-          Interactive Assessment
+          Algoritmo di Valutazione Biomeccanica
         </span>
-        <h2 class="text-3xl font-black">Test di Autovalutazione Rapido</h2>
-        <p class="text-slate-400 text-sm">Scopri come la biomeccanica o la chinesiologia possono risolvere il tuo problema.</p>
+        <h2 class="text-3xl font-black">Test di Screening Iniziale</h2>
+        <p class="text-slate-400 text-sm">Rispondi a 3 brevi quesiti per individuare il protocollo chinesiologico o biomeccanico più adatto.</p>
       </div>
 
       <div id="quiz-container" class="space-y-6">
-        <div>
-          <label class="block text-sm font-bold text-slate-200 mb-3">1. Qual è il tuo obiettivo primario?</label>
-          <div class="grid sm:grid-cols-2 gap-3">
-            <button onclick="selectQuizOption('obiettivo', 'ciclismo')" class="quiz-opt-1 p-4 rounded-xl border border-slate-800 bg-slate-900/50 hover:border-brandOrange text-left text-sm font-medium transition">
-              <i class="fa-solid fa-bicycle text-brandOrange mr-2"></i> Risolvere dolori in Bici / Bike Fitting
-            </button>
-            <button onclick="selectQuizOption('obiettivo', 'infortunio')" class="quiz-opt-1 p-4 rounded-xl border border-slate-800 bg-slate-900/50 hover:border-brandMagenta text-left text-sm font-medium transition">
-              <i class="fa-solid fa-person-running text-brandMagenta mr-2"></i> Rientrare da un Infortunio (Return to Play)
-            </button>
-          </div>
-        </div>
-
-        <div id="quiz-step-2" class="hidden space-y-3">
-          <label class="block text-sm font-bold text-slate-200 mb-3">2. Dove avverti maggiormente il fastidio o la limitazione?</label>
+        
+        <!-- STEP 1: Disciplina -->
+        <div id="quiz-step-1" class="space-y-3">
+          <label class="block text-sm font-bold text-slate-200">1. Qual è il tuo ambito sportivo prevalente?</label>
           <div class="grid sm:grid-cols-3 gap-3">
-            <button onclick="finishQuiz('Ginocchio / Anca')" class="p-3 rounded-xl border border-slate-800 bg-slate-900/50 hover:border-brandBlue text-left text-xs font-medium transition">Ginocchio / Anca</button>
-            <button onclick="finishQuiz('Schiena / Cervicale')" class="p-3 rounded-xl border border-slate-800 bg-slate-900/50 hover:border-brandBlue text-left text-xs font-medium transition">Schiena / Cervicale</button>
-            <button onclick="finishQuiz('Mani / Appoggio Sella')" class="p-3 rounded-xl border border-slate-800 bg-slate-900/50 hover:border-brandBlue text-left text-xs font-medium transition">Formicolio / Sella</button>
+            <button onclick="setStep1('Ciclismo (BDC / MTB / Gravel)')" class="p-4 rounded-xl border border-slate-800 bg-slate-900/50 hover:border-brandOrange text-left text-sm font-semibold transition flex items-center gap-2">
+              <i class="fa-solid fa-bicycle text-brandOrange"></i> Ciclismo
+            </button>
+            <button onclick="setStep1('Corsa / Atletica')" class="p-4 rounded-xl border border-slate-800 bg-slate-900/50 hover:border-brandMagenta text-left text-sm font-semibold transition flex items-center gap-2">
+              <i class="fa-solid fa-person-running text-brandMagenta"></i> Running / Corsa
+            </button>
+            <button onclick="setStep1('Sport di Squadra / Altro')" class="p-4 rounded-xl border border-slate-800 bg-slate-900/50 hover:border-brandBlue text-left text-sm font-semibold transition flex items-center gap-2">
+              <i class="fa-solid fa-dumbbell text-brandBlue"></i> Altri Sport / Fitness
+            </button>
           </div>
         </div>
 
-        <div id="quiz-result" class="hidden p-6 rounded-2xl bg-slate-900/90 border border-brandMagenta/40 space-y-4 text-center">
-          <i class="fa-solid fa-circle-check text-4xl text-brandMagenta"></i>
-          <h3 class="text-xl font-bold text-white">Analisi Iniziale Completata!</h3>
-          <p class="text-sm text-slate-300 leading-relaxed" id="quiz-result-text"></p>
-          <a href="#contatti" class="inline-block bg-gradient-to-r from-brandMagenta to-brandOrange text-white font-bold px-6 py-3 rounded-xl text-sm transition">
-            Prenota la Valutazione per il tuo caso
-          </a>
+        <!-- STEP 2: Condizione/Obiettivo -->
+        <div id="quiz-step-2" class="hidden space-y-3">
+          <label class="block text-sm font-bold text-slate-200">2. Qual è la condizione da analizzare?</label>
+          <div class="grid sm:grid-cols-2 gap-3">
+            <button onclick="setStep2('Dolore da sovraccarico / Asimmetria')" class="p-4 rounded-xl border border-slate-800 bg-slate-900/50 hover:border-brandOrange text-left text-xs font-semibold transition">
+              <i class="fa-solid fa-triangle-exclamation text-brandOrange mr-2"></i> Fastidio / Dolore durante l'esercizio
+            </button>
+            <button onclick="setStep2('Post-Infortunio / Riatletizzazione')" class="p-4 rounded-xl border border-slate-800 bg-slate-900/50 hover:border-brandMagenta text-left text-xs font-semibold transition">
+              <i class="fa-solid fa-notes-medical text-brandMagenta mr-2"></i> Recupero funzionale da trauma o chirurgia
+            </button>
+          </div>
         </div>
+
+        <!-- STEP 3: Localizzazione -->
+        <div id="quiz-step-3" class="hidden space-y-3">
+          <label class="block text-sm font-bold text-slate-200">3. Distretto anatomico maggiormente interessato:</label>
+          <div class="grid grid-cols-2 sm:grid-cols-4 gap-3">
+            <button onclick="finishScientificQuiz('Ginocchio / Muscoli della Coscia')" class="p-3 rounded-xl border border-slate-800 bg-slate-900/50 hover:border-brandBlue text-center text-xs font-medium transition">Ginocchio / Coscia</button>
+            <button onclick="finishScientificQuiz('Rachide (Lombare / Cervicale)')" class="p-3 rounded-xl border border-slate-800 bg-slate-900/50 hover:border-brandBlue text-center text-xs font-medium transition">Schiena / Collo</button>
+            <button onclick="finishScientificQuiz('Caviglia / Piede / Appoggio')" class="p-3 rounded-xl border border-slate-800 bg-slate-900/50 hover:border-brandBlue text-center text-xs font-medium transition">Piede / Caviglia</button>
+            <button onclick="finishScientificQuiz('Spalla / Appoggio Manubrio')" class="p-3 rounded-xl border border-slate-800 bg-slate-900/50 hover:border-brandBlue text-center text-xs font-medium transition">Spalla / Bacino</button>
+          </div>
+        </div>
+
+        <!-- RISULTATO SCIENTIFICO -->
+        <div id="quiz-result" class="hidden p-6 rounded-2xl bg-slate-900/95 border border-brandMagenta/50 space-y-4 text-center">
+          <div class="inline-flex items-center justify-center w-12 h-12 rounded-full bg-brandMagenta/20 text-brandMagenta mb-2">
+            <i class="fa-solid fa-microscope text-2xl"></i>
+          </div>
+          <h3 class="text-xl font-bold text-white">Esito dello Screening Iniziale</h3>
+          <p class="text-sm text-slate-300 leading-relaxed max-w-2xl mx-auto" id="quiz-result-text"></p>
+          <div class="pt-2">
+            <a id="quiz-wa-btn" href="#" target="_blank" class="inline-flex items-center gap-2 bg-gradient-to-r from-brandMagenta to-brandOrange text-white font-bold px-6 py-3 rounded-xl text-sm transition shadow-lg shadow-brandMagenta/25 hover:scale-105">
+              <i class="fa-brands fa-whatsapp text-lg"></i> Invia Screening e Prenota Valutazione
+            </a>
+          </div>
+        </div>
+
       </div>
     </div>
   </section>
