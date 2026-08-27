@@ -400,19 +400,34 @@
   </footer>
 
   <script>
-    let selectedGoal = '';
-    function selectQuizOption(type, value) {
-      selectedGoal = value;
+    let userSport = '';
+    let userGoal = '';
+
+    function setStep1(sport) {
+      userSport = sport;
+      document.getElementById('quiz-step-1').classList.add('hidden');
       document.getElementById('quiz-step-2').classList.remove('hidden');
     }
-    function finishQuiz(area) {
+
+    function setStep2(goal) {
+      userGoal = goal;
       document.getElementById('quiz-step-2').classList.add('hidden');
+      document.getElementById('quiz-step-3').classList.remove('hidden');
+    }
+
+    function finishScientificQuiz(area) {
+      document.getElementById('quiz-step-3').classList.add('hidden');
+      
       const resultText = document.getElementById('quiz-result-text');
-      if (selectedGoal === 'ciclismo') {
-        resultText.innerText = `I fastidi nell'area "${area}" derivano solitamente da un disassamento micrometrico tra sella, tacchette o manubrio. Con la nostra analisi biomeccanica a Nimis elimineremo le sovraccaricazioni articolari.`;
-      } else {
-        resultText.innerText = `La sensibilità nell'area "${area}" richiede un protocollo mirato di valutazione dei compensi motori. Con il percorso di Return to Play riabiliteremo la funzione muscolare in totale sicurezza.`;
-      }
+      const waBtn = document.getElementById('quiz-wa-btn');
+
+      let messaggio = `I dolori/fastidi identificati per l'ambito ${userSport} (${userGoal}) nella zona "${area}" richiedono un'analisi personalizzata per eliminare i sovraccarichi.`;
+      
+      resultText.innerText = messaggio;
+
+      let textUrl = encodeURIComponent(`Ciao! Ho completato lo screening sul sito:\n- Ambito: ${userSport}\n- Obiettivo: ${userGoal}\n- Zona: ${area}\nVorrei prenotare una valutazione.`);
+      waBtn.href = `https://wa.me/393123456789?text=${textUrl}`;
+
       document.getElementById('quiz-result').classList.remove('hidden');
     }
   </script>
