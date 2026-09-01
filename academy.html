@@ -1,70 +1,220 @@
 <!DOCTYPE html>
-<html lang="it">
+<html lang="it" class="scroll-smooth">
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Academy | CP Performance Lab</title>
-    <link rel="stylesheet" href="style.css">
+    <title>Academy | CP Performance Lab - Sport Science & High Performance</title>
+    <meta name="description" content="CP Performance Academy: Formazione specialistica e scientifica per coach, preparatori atletici e professionisti della performance sportiva.">
+    <!-- Tailwind CSS CDN -->
+    <script src="https://cdn.tailwindcss.com"></script>
+    <script>
+        tailwind.config = {
+            theme: {
+                extend: {
+                    colors: {
+                        brand: {
+                            dark: '#0a0f1d',
+                            card: '#111827',
+                            accent: '#3b82f6',
+                            emerald: '#10b981',
+                            glow: '#2563eb'
+                        }
+                    }
+                }
+            }
+        }
+    </script>
+    <!-- Lucide Icons -->
+    <script src="https://unpkg.com/lucide@latest"></script>
+    <style>
+        @import url('https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:wght@300;400;600;700;800&display=swap');
+        body { font-family: 'Plus Jakarta Sans', sans-serif; }
+        .gradient-text {
+            background: linear-gradient(135deg, #60a5fa 0%, #3b82f6 50%, #10b981 100%);
+            -webkit-background-clip: text;
+            -webkit-text-fill-color: transparent;
+        }
+        .glow-effect {
+            box-shadow: 0 0 50px -10px rgba(59, 130, 246, 0.25);
+        }
+    </style>
 </head>
-<body>
+<body class="bg-[#080c14] text-slate-100 antialiased selection:bg-blue-500 selection:text-white">
 
-    <header>
-        <nav>
-            <div class="logo">CP PERFORMANCE LAB</div>
-            <ul>
-                <li><a href="index.html">Home</a></li>
-                <li><a href="academy.html" class="active">Academy</a></li>
-            </ul>
-        </nav>
+    <!-- Header Navigation -->
+    <header class="fixed top-0 left-0 w-full z-50 bg-[#080c14]/80 backdrop-blur-md border-b border-slate-800/60">
+        <div class="max-w-7xl mx-auto px-6 h-20 flex items-center justify-between">
+            <a href="index.html" class="flex items-center gap-3 group">
+                <div class="w-10 h-10 rounded-xl bg-blue-600/20 border border-blue-500/40 flex items-center justify-center group-hover:scale-105 transition-transform">
+                    <i data-lucide="activity" class="w-6 h-6 text-blue-400"></i>
+                </div>
+                <span class="font-extrabold text-xl tracking-tight">CP <span class="text-blue-500">PERFORMANCE</span></span>
+            </a>
+
+            <nav class="hidden md:flex items-center gap-8 text-sm font-semibold text-slate-300">
+                <a href="index.html" class="hover:text-white transition-colors">Home</a>
+                <a href="academy.html" class="text-blue-400 border-b-2 border-blue-500 pb-1">Academy</a>
+                <a href="index.html#servizi" class="hover:text-white transition-colors">Servizi</a>
+                <a href="index.html#contatti" class="hover:text-white transition-colors">Contatti</a>
+            </nav>
+
+            <a href="#percorsi" class="hidden sm:inline-flex items-center gap-2 px-5 py-2.5 rounded-xl bg-gradient-to-r from-blue-600 to-blue-500 hover:from-blue-500 hover:to-blue-400 text-white font-bold text-sm shadow-lg shadow-blue-500/20 transition-all hover:scale-[1.02]">
+                <span>Esplora i Corsi</span>
+                <i data-lucide="arrow-right" class="w-4 h-4"></i>
+            </a>
+        </div>
     </header>
 
-    <section class="hero-academy">
-        <h1>CP Performance Academy</h1>
-        <h2>Alta Formazione Specialistica in Biomeccanica Clinica, Terapia Manuale & Performance Integrata</h2>
-        <p>Un protocollo Evidence-Based ideato per Chinesiologi, Fisioterapisti, Massofisioterapisti e Preparatori Atletici.</p>
-        <a href="#candidatura" class="btn-primary">Invia la tua Candidatura</a>
-    </section>
-
-    <section class="method">
-        <h2>Il Metodo CP Performance System</h2>
-        <div class="grid">
-            <div class="card">
-                <h3>1. Analisi Cinematica 2D/3D</h3>
-                <p>Valutazione dinamica del gesto atletico (ciclismo, corsa, forza e sport di squadra) e individuazione delle asimmetrie di carico sotto sforzo.</p>
-            </div>
-            <div class="card">
-                <h3>2. Targeted Myofascial Release</h3>
-                <p>Tecniche manuali e trattamento dei Trigger Point per rimuovere le restrizioni connettivali e ripristinare il corretto Range of Motion.</p>
-            </div>
-            <div class="card">
-                <h3>3. Re-Patterning Motorio</h3>
-                <p>Protocolli di esercizio correttivo e riatletizzazione basati sulla neuroplasticità per consolidare la nuova postura nel Sistema Nervoso Centrale.</p>
+    <!-- Hero Section -->
+    <section class="relative pt-36 pb-24 overflow-hidden border-b border-slate-800/50">
+        <div class="absolute inset-0 bg-[radial-gradient(ellipse_at_top,_var(--tw-gradient-stops))] from-blue-900/20 via-slate-900/0 to-transparent"></div>
+        <div class="max-w-7xl mx-auto px-6 relative z-10">
+            <div class="max-w-3xl">
+                <div class="inline-flex items-center gap-2 px-3.5 py-1.5 rounded-full bg-blue-500/10 border border-blue-500/30 text-blue-400 text-xs font-bold uppercase tracking-wider mb-6">
+                    <i data-lucide="sparkles" class="w-4 h-4"></i> High Performance Education
+                </div>
+                <h1 class="text-5xl md:text-7xl font-extrabold tracking-tight mb-6 leading-[1.1]">
+                    Eleviamo il futuro della <span class="gradient-text">Sport Science</span>.
+                </h1>
+                <p class="text-lg md:text-xl text-slate-400 font-normal mb-8 leading-relaxed">
+                    Un'accademia ad altissimo impatto teorico-pratico per preparatori atletici, physiotherapist e sport scientist che vogliono dominare i principi della biomeccanica e del controllo del carico.
+                </p>
+                <div class="flex flex-wrap items-center gap-4">
+                    <a href="#percorsi" class="px-8 py-4 rounded-xl bg-blue-600 hover:bg-blue-500 text-white font-bold text-base shadow-lg shadow-blue-600/30 transition-all hover:scale-[1.02] flex items-center gap-3">
+                        Scopri i Moduli Formativi <i data-lucide="chevron-right" class="w-5 h-5"></i>
+                    </a>
+                    <a href="#metodo" class="px-8 py-4 rounded-xl bg-slate-900 border border-slate-800 hover:bg-slate-800/80 text-slate-300 font-bold text-base transition-all">
+                        Il Metodo Scientifico
+                    </a>
+                </div>
             </div>
         </div>
     </section>
 
-    <section id="candidatura" class="form-section">
-        <h2>Richiedi l'Accesso all'Academy</h2>
-        <p>I posti sono limitati e soggetti a selezione per garantire l'eccellenza didattica.</p>
-        
-        <form action="#" method="POST">
-            <label for="nome">Nome e Cognome</label>
-            <input type="text" id="nome" name="nome" required>
+    <!-- Features & Method Grid -->
+    <section id="metodo" class="py-24 bg-[#0a0f1d]">
+        <div class="max-w-7xl mx-auto px-6">
+            <div class="text-center max-w-2xl mx-auto mb-16">
+                <h2 class="text-3xl md:text-4xl font-extrabold tracking-tight mb-4">Perché scegliere CP Academy</h2>
+                <p class="text-slate-400">Unisci evidenze scientifiche peer-reviewed alla pratica di campo con i migliori strumenti tecnologici.</p>
+            </div>
 
-            <label for="email">Email Professionale</label>
-            <input type="email" id="email" name="email" required>
+            <div class="grid md:grid-cols-3 gap-8">
+                <!-- Card 1 -->
+                <div class="p-8 rounded-2xl bg-slate-900/60 border border-slate-800/80 hover:border-blue-500/50 transition-all group hover:-translate-y-1">
+                    <div class="w-12 h-12 rounded-xl bg-blue-500/10 border border-blue-500/20 flex items-center justify-center mb-6 text-blue-400 group-hover:scale-110 transition-transform">
+                        <i data-lucide="cpu" class="w-6 h-6"></i>
+                    </div>
+                    <h3 class="text-xl font-bold mb-3">Tecnologia & Data Tracking</h3>
+                    <p class="text-slate-400 text-sm leading-relaxed">
+                        Analisi avanzata tramite encoder lineari, GPS ad altissima frequenza e pedane di forza per decisioni basate sui dati reali.
+                    </p>
+                </div>
 
-            <label for="professione">Professione / Titolo di Studio</label>
-            <select id="professione" name="professione">
-                <option value="chinesiologo">Chinesiologo / Scienze Motorie</option>
-                <option value="fisioterapista">Fisioterapista / Massofisioterapista</option>
-                <option value="preparatore">Preparatore Atletico / Personal Trainer</option>
-                <option value="altro">Altro settore sanitario/sportivo</option>
-            </select>
+                <!-- Card 2 -->
+                <div class="p-8 rounded-2xl bg-slate-900/60 border border-slate-800/80 hover:border-emerald-500/50 transition-all group hover:-translate-y-1">
+                    <div class="w-12 h-12 rounded-xl bg-emerald-500/10 border border-emerald-500/20 flex items-center justify-center mb-6 text-emerald-400 group-hover:scale-110 transition-transform">
+                        <i data-lucide="zap" class="w-6 h-6"></i>
+                    </div>
+                    <h3 class="text-xl font-bold mb-3">Biomeccanica Applicata</h3>
+                    <p class="text-slate-400 text-sm leading-relaxed">
+                        Comprensione profonda della catena cinematica, ottimizzazione del profilo Forza-Velocità e prevenzione infortuni sul campo.
+                    </p>
+                </div>
 
-            <button type="submit" class="btn-submit">Candidati Ora</button>
-        </form>
+                <!-- Card 3 -->
+                <div class="p-8 rounded-2xl bg-slate-900/60 border border-slate-800/80 hover:border-blue-500/50 transition-all group hover:-translate-y-1">
+                    <div class="w-12 h-12 rounded-xl bg-blue-500/10 border border-blue-500/20 flex items-center justify-center mb-6 text-blue-400 group-hover:scale-110 transition-transform">
+                        <i data-lucide="shield-check" class="w-6 h-6"></i>
+                    </div>
+                    <h3 class="text-xl font-bold mb-3">Certificazione Internazionale</h3>
+                    <p class="text-slate-400 text-sm leading-relaxed">
+                        Attestato riconosciuto nell'ambito dell'allenamento ad alte prestazioni e network esclusivo con professionisti del settore.
+                    </p>
+                </div>
+            </div>
+        </div>
     </section>
 
+    <!-- Course Modules Section -->
+    <section id="percorsi" class="py-24">
+        <div class="max-w-7xl mx-auto px-6">
+            <div class="flex flex-col md:flex-row md:items-end justify-between mb-16 gap-6">
+                <div>
+                    <span class="text-blue-500 font-bold text-sm tracking-wider uppercase">Corsi e Masterclass</span>
+                    <h2 class="text-3xl md:text-5xl font-extrabold tracking-tight mt-2">Programmi di Formazione</h2>
+                </div>
+                <p class="text-slate-400 max-w-md">Percorsi strutturati in moduli progressivi per masterizzare ogni aspetto della performance atletica.</p>
+            </div>
+
+            <div class="grid lg:grid-cols-2 gap-8">
+                <!-- Module 1 -->
+                <div class="p-8 rounded-3xl bg-slate-900/40 border border-slate-800 hover:border-slate-700 transition-all relative overflow-hidden flex flex-col justify-between">
+                    <div>
+                        <div class="flex items-center justify-between mb-6">
+                            <span class="px-3 py-1 rounded-full bg-blue-500/10 text-blue-400 font-bold text-xs">MODULO 01</span>
+                            <span class="text-xs text-slate-400 font-medium"><i data-lucide="clock" class="inline w-3.5 h-3.5 mr-1"></i> 20 Ore Teoria/Pratica</span>
+                        </div>
+                        <h3 class="text-2xl font-bold mb-4">VBT & Load Management Specialist</h3>
+                        <p class="text-slate-400 text-sm mb-6 leading-relaxed">
+                            Masterclass completa sul Velocity-Based Training. Impara a calcolare il profilo F-V, gestire la fatica neuromuscolare e dosare i carichi giornalieri in tempo reale.
+                        </p>
+                    </div>
+                    <a href="#contatti" class="inline-flex items-center gap-2 text-blue-400 font-bold text-sm hover:text-blue-300 transition-colors">
+                        Richiedi il sillabo del corso <i data-lucide="arrow-right" class="w-4 h-4"></i>
+                    </a>
+                </div>
+
+                <!-- Module 2 -->
+                <div class="p-8 rounded-3xl bg-slate-900/40 border border-slate-800 hover:border-slate-700 transition-all relative overflow-hidden flex flex-col justify-between">
+                    <div>
+                        <div class="flex items-center justify-between mb-6">
+                            <span class="px-3 py-1 rounded-full bg-emerald-500/10 text-emerald-400 font-bold text-xs">MODULO 02</span>
+                            <span class="text-xs text-slate-400 font-medium"><i data-lucide="clock" class="inline w-3.5 h-3.5 mr-1"></i> 30 Ore Teoria/Pratica</span>
+                        </div>
+                        <h3 class="text-2xl font-bold mb-4">RTH & Return to Play Protocols</h3>
+                        <p class="text-slate-400 text-sm mb-6 leading-relaxed">
+                            Pianificazione del rientro in campo dopo infortuni complessi. Dalla fase di reatletizzazione alla massima sollecitazione ad alta velocità sul terreno di gioco.
+                        </p>
+                    </div>
+                    <a href="#contatti" class="inline-flex items-center gap-2 text-emerald-400 font-bold text-sm hover:text-emerald-300 transition-colors">
+                        Richiedi il sillabo del corso <i data-lucide="arrow-right" class="w-4 h-4"></i>
+                    </a>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Call To Action -->
+    <section id="contatti" class="py-20 bg-gradient-to-b from-blue-900/20 to-slate-950 border-t border-slate-800/80">
+        <div class="max-w-5xl mx-auto px-6 text-center">
+            <h2 class="text-3xl md:text-5xl font-extrabold mb-6 tracking-tight">Pronto a fare il salto di qualità?</h2>
+            <p class="text-slate-400 max-w-2xl mx-auto mb-10 text-base md:text-lg">
+                I posti per i corsi pratici e le masterclass sono limitati per garantire un'esperienza formativa ad altissimo livello.
+            </p>
+            <a href="mailto:info@cpperformance.it" class="inline-flex items-center gap-3 px-10 py-5 rounded-2xl bg-blue-600 hover:bg-blue-500 text-white font-extrabold text-lg shadow-xl shadow-blue-600/30 transition-all hover:scale-105">
+                <i data-lucide="mail" class="w-5 h-5"></i>
+                Contatta la Segreteria Academy
+            </a>
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <footer class="py-12 border-t border-slate-900 text-slate-500 text-sm">
+        <div class="max-w-7xl mx-auto px-6 flex flex-col md:flex-row items-center justify-between gap-6">
+            <div class="flex items-center gap-2">
+                <span class="font-bold text-slate-300">CP Performance Lab</span>
+                <span>© 2026. Tutti i diritti riservati.</span>
+            </div>
+            <div class="flex gap-6">
+                <a href="index.html" class="hover:text-slate-300 transition-colors">Home</a>
+                <a href="academy.html" class="hover:text-slate-300 transition-colors">Academy</a>
+            </div>
+        </div>
+    </footer>
+
+    <script>
+        lucide.createIcons();
+    </script>
 </body>
 </html>
