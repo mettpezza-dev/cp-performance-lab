@@ -7,7 +7,15 @@
   <title>CP Performance Lab | Bike Fitting & Return to Play a Nimis (Udine)</title>
   <meta name="description" content="Centro di Biomeccanica Ciclismo (messa in sella) e Chinesiologia per Return to Play a Nimis (Udine). Percorsi scientifici per ciclisti ed atleti in Friuli.">
   <meta name="keywords" content="Bike Fitting Udine, Messa in sella Nimis, Biomeccanica Ciclismo Friuli, Return to Play Udine, Chinesiologia Cividale, Riatletizzazione Gemona">
-
+<!-- PWA Config -->
+    <link rel="manifest" href="manifest.json">
+    <meta name="theme-color" content="#080c14">
+    <script>
+      if ('serviceWorker' in navigator) {
+        navigator.serviceWorker.register('sw.js');
+      }
+      
+    </script>
   <script src="https://cdn.tailwindcss.com"></script>
   <script>
     tailwind.config = {
