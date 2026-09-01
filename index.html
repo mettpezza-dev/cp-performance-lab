@@ -49,7 +49,17 @@
     .glow-blue:hover {
       box-shadow: 0 0 25px rgba(0, 102, 255, 0.25);
     }
-  </style>
+  
+  /* Rimuove il badge fluttuante di Netlify */
+  iframe[title*="Netlify"],
+  [data-netlify-drawers],
+  div[class*="netlify"] {
+    display: none !important;
+    opacity: 0 !important;
+    pointer-events: none !important;
+  }
+</style>
+
 </head>
 <body class="bg-brandDark text-slate-100 font-sans antialiased selection:bg-brandMagenta selection:text-white">
 
