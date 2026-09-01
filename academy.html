@@ -1,0 +1,70 @@
+<!DOCTYPE html>
+<html lang="it">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Academy | CP Performance Lab</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+    <header>
+        <nav>
+            <div class="logo">CP PERFORMANCE LAB</div>
+            <ul>
+                <li><a href="index.html">Home</a></li>
+                <li><a href="academy.html" class="active">Academy</a></li>
+            </ul>
+        </nav>
+    </header>
+
+    <section class="hero-academy">
+        <h1>CP Performance Academy</h1>
+        <h2>Alta Formazione Specialistica in Biomeccanica Clinica, Terapia Manuale & Performance Integrata</h2>
+        <p>Un protocollo Evidence-Based ideato per Chinesiologi, Fisioterapisti, Massofisioterapisti e Preparatori Atletici.</p>
+        <a href="#candidatura" class="btn-primary">Invia la tua Candidatura</a>
+    </section>
+
+    <section class="method">
+        <h2>Il Metodo CP Performance System</h2>
+        <div class="grid">
+            <div class="card">
+                <h3>1. Analisi Cinematica 2D/3D</h3>
+                <p>Valutazione dinamica del gesto atletico (ciclismo, corsa, forza e sport di squadra) e individuazione delle asimmetrie di carico sotto sforzo.</p>
+            </div>
+            <div class="card">
+                <h3>2. Targeted Myofascial Release</h3>
+                <p>Tecniche manuali e trattamento dei Trigger Point per rimuovere le restrizioni connettivali e ripristinare il corretto Range of Motion.</p>
+            </div>
+            <div class="card">
+                <h3>3. Re-Patterning Motorio</h3>
+                <p>Protocolli di esercizio correttivo e riatletizzazione basati sulla neuroplasticità per consolidare la nuova postura nel Sistema Nervoso Centrale.</p>
+            </div>
+        </div>
+    </section>
+
+    <section id="candidatura" class="form-section">
+        <h2>Richiedi l'Accesso all'Academy</h2>
+        <p>I posti sono limitati e soggetti a selezione per garantire l'eccellenza didattica.</p>
+        
+        <form action="#" method="POST">
+            <label for="nome">Nome e Cognome</label>
+            <input type="text" id="nome" name="nome" required>
+
+            <label for="email">Email Professionale</label>
+            <input type="email" id="email" name="email" required>
+
+            <label for="professione">Professione / Titolo di Studio</label>
+            <select id="professione" name="professione">
+                <option value="chinesiologo">Chinesiologo / Scienze Motorie</option>
+                <option value="fisioterapista">Fisioterapista / Massofisioterapista</option>
+                <option value="preparatore">Preparatore Atletico / Personal Trainer</option>
+                <option value="altro">Altro settore sanitario/sportivo</option>
+            </select>
+
+            <button type="submit" class="btn-submit">Candidati Ora</button>
+        </form>
+    </section>
+
+</body>
+</html>
