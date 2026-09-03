@@ -1,0 +1,121 @@
+<!DOCTYPE html>
+<html lang="it" class="scroll-smooth">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Chi Siamo | CP Performance Lab</title>
+    <link rel="icon" type="image/png" href="icon.png">
+    <link rel="apple-touch-icon" href="icon.png">
+    <script src="https://cdn.tailwindcss.com"></script>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <style>
+        .glass-panel {
+            background: rgba(22, 28, 40, 0.6);
+            backdrop-filter: blur(12px);
+            border: 1px solid rgba(255, 255, 255, 0.08);
+        }
+        .glow-magenta:hover {
+            box-shadow: 0 0 25px rgba(230, 0, 122, 0.25);
+        }
+        .glow-blue:hover {
+            box-shadow: 0 0 25px rgba(0, 102, 255, 0.25);
+        }
+    </style>
+</head>
+<body class="bg-[#0B0F17] text-slate-100 font-sans antialiased">
+
+    <!-- Header / Navbar -->
+    <nav class="fixed w-full z-50 bg-[#0B0F17]/90 backdrop-blur-md border-b border-slate-800/80">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 py-3 flex justify-between items-center">
+            <a href="index.html">
+                <img src="logo.png" alt="CP Performance Lab" class="h-12 w-auto">
+            </a>
+            <a href="index.html" class="text-sm font-semibold text-slate-300 hover:text-white transition flex items-center gap-2">
+                <i class="fa-solid fa-arrow-left"></i> Torna alla Home
+            </a>
+        </div>
+    </nav>
+
+    <!-- Hero Section Chi Siamo -->
+    <section class="pt-32 pb-16 px-4 sm:px-6 max-w-7xl mx-auto text-center">
+        <span class="text-pink-500 font-semibold tracking-wider uppercase text-sm">Il Nostro Team</span>
+        <h1 class="text-4xl sm:text-5xl font-extrabold text-white mt-3">Scienza della Biomeccanica, Chinesiologia & Preparazione Atletica</h1>
+        <p class="text-slate-400 max-w-3xl mx-auto mt-4 text-lg">
+            Dove l'analisi ingegneristica incontra la fisiologia del movimento per portare la tua prestazione al livello successivo.
+        </p>
+    </section>
+
+    <!-- Griglia Profilo Team -->
+    <section class="pb-20 px-4 sm:px-6 max-w-6xl mx-auto">
+        <div class="grid md:grid-cols-2 gap-10">
+            
+            <!-- Profilo Mattia Pezzarini -->
+            <div class="glass-panel p-8 rounded-3xl flex flex-col justify-between transition border border-slate-800 hover:border-pink-500/50 glow-magenta">
+                <div>
+                    <div class="h-80 rounded-2xl overflow-hidden mb-6 bg-slate-900">
+                        <img src="atleta.png" alt="Mattia Pezzarini" class="w-full h-full object-cover">
+                    </div>
+                    <span class="text-xs font-bold uppercase tracking-widest text-pink-500">Chinesiologo & Preparatore Atletico</span>
+                    <h2 class="text-2xl font-bold text-white mt-1">Mattia Pezzarini</h2>
+                    <p class="text-slate-400 mt-4 leading-relaxed text-sm">
+                        Laureato in Scienze Motorie nel 2022, sono specializzato in Chinesiologia, Biomeccanica applicata al ciclismo e Preparazione Atletica. Il mio lavoro spazia dall'ottimizzazione dell'assetto in sella e la riatletizzazione post-infortunio (Return to Play) fino alla programmazione su misura dell'allenamento.
+                    </p>
+                    <p class="text-slate-400 mt-3 leading-relaxed text-sm">
+                        Nel mio percorso ho avuto il privilegio di seguire diversi atleti di alto livello, tra cui Stefano Viezzi, laureatosi Campione del Mondo di Ciclocross. Il mio obiettivo è trasformare i dati biometrici e le valutazioni funzionali in strategie pratiche e scientifiche per far esprimere a ogni atleta il suo massimo potenziale.
+                    </p>
+                </div>
+            </div>
+
+            <!-- Profilo Alex Cimenti -->
+            <div class="glass-panel p-8 rounded-3xl flex flex-col justify-between transition border border-slate-800 hover:border-blue-500/50 glow-blue">
+                <div>
+                    <div class="h-80 rounded-2xl overflow-hidden mb-6 bg-slate-900">
+                        <img src="alex-cimenti.jpg" alt="Alex Cimenti" class="w-full h-full object-cover">
+                    </div>
+                    <span class="text-xs font-bold uppercase tracking-widest text-blue-400">Ingegnere Biomedico & Specialist</span>
+                    <h2 class="text-2xl font-bold text-white mt-1">Alex Cimenti</h2>
+                    <p class="text-slate-400 mt-4 leading-relaxed text-sm">
+                        Laureato in Ingegneria Biomedica, Alex è un praticante attivo di Triathlon e da sempre un profondo appassionato di tutte le ultime innovazioni tecnologiche legate al mondo della bicicletta. 
+                    </p>
+                    <p class="text-slate-400 mt-3 leading-relaxed text-sm">
+                        Nel laboratorio porta il rigore e la precisione dell'analisi ingegneristica: la sua formazione gli permette di interpretare i dati delle forze in gioco, la dinamica di pedalata e l'aerodinamica con un approccio altamente quantitativo. L'unione tra la conoscenza delle tecnologie biomediche d'avanguardia e la pratica diretta sul campo nelle discipline di endurance garantisce un'analisi analitica, moderna e cucita sulle reali esigenze del ciclista.
+                    </p>
+                </div>
+            </div>
+
+        </div>
+
+        <!-- I 3 Pilastri -->
+        <div class="mt-20">
+            <h3 class="text-2xl font-bold text-white text-center mb-10">I Pilastri del Nostro Metodo</h3>
+            <div class="grid sm:grid-cols-3 gap-6">
+                <div class="glass-panel p-6 rounded-2xl">
+                    <div class="text-pink-500 text-2xl mb-3"><i class="fa-solid fa-graduation-cap"></i></div>
+                    <h4 class="text-lg font-bold text-white mb-2">Competenza Multidisciplinare</h4>
+                    <p class="text-slate-400 text-sm">Scienze Motorie e Ingegneria Biomedica unite per integrare fisiologia, preparazione atletica e dati strumentali.</p>
+                </div>
+                <div class="glass-panel p-6 rounded-2xl">
+                    <div class="text-pink-500 text-2xl mb-3"><i class="fa-solid fa-trophy"></i></div>
+                    <h4 class="text-lg font-bold text-white mb-2">Esperienza & Passione</h4>
+                    <p class="text-slate-400 text-sm">Dalla preparazione per un titolo iridato fino alla pratica diretta del Triathlon, conosciamo cosa serve per fare la differenza.</p>
+                </div>
+                <div class="glass-panel p-6 rounded-2xl">
+                    <div class="text-pink-500 text-2xl mb-3"><i class="fa-solid fa-microscope"></i></div>
+                    <h4 class="text-lg font-bold text-white mb-2">Innovazione Continua</h4>
+                    <p class="text-slate-400 text-sm">Sfruttiamo le ultime novità tecnologiche del settore per eliminare ogni approssimazione e creare protocolli su misura.</p>
+                </div>
+            </div>
+        </div>
+
+        <!-- Call to Action -->
+        <div class="mt-16 glass-panel p-8 rounded-3xl text-center max-w-3xl mx-auto border border-slate-800">
+            <h3 class="text-2xl font-bold text-white">Vuoi valutare la tua posizione in sella o la tua preparazione?</h3>
+            <p class="text-slate-400 mt-2 text-sm">Prenota un test o una prima visita presso lo studio di Nimis (UD).</p>
+            <a href="index.html#contatti" class="inline-block mt-6 px-8 py-3 bg-gradient-to-r from-pink-600 to-orange-500 hover:opacity-90 text-white font-semibold rounded-xl transition shadow-lg">
+                Prenota una Valutazione
+            </a>
+        </div>
+    </section>
+
+</body>
+</html>
